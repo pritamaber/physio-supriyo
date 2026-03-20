@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="rounded-full bg-teal-700 px-6 py-3 text-white hover:bg-teal-800">
+            <button className="rounded-full bg-teal-700 px-6 pjy-3 text-white hover:bg-teal-800">
               Book Consultation
             </button>
 
