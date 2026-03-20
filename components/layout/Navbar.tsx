@@ -1,40 +1,74 @@
 "use client";
 
+// Core imports
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+// Icons
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
+
+// Site config
 import { siteConfig } from "@/lib/site";
+
+// Logo Font style
+import { Dancing_Script } from "next/font/google";
+
+const cursive = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeMenu = () => setMenuOpen(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
     <header className="sticky top-0 z-[100] border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
-          <Link
-            href="/"
-            onClick={closeMenu}
-            className="text-lg font-bold tracking-tight text-slate-900 sm:text-xl"
-          >
-            {siteConfig.name}
-          </Link>
+          {/* LOGO */}
+          <div className="relative">
+            <div className="absolute -inset-2 rounded-full bg-teal-100 blur-md opacity-60 pointer-events-none"></div>
 
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="relative z-10 text-lg sm:text-xl text-slate-900"
+            >
+              <span className={`${cursive.className} text-teal-700`}>
+                PhysioSupriyo
+              </span>
+            </Link>
+          </div>
+
+          {/* DESKTOP NAV */}
           <nav className="hidden items-center gap-6 lg:flex">
-            {siteConfig.navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-slate-600 transition hover:text-teal-700"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {siteConfig.navItems.map((item) => {
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition ${
+                    isActive
+                      ? "text-teal-700 font-semibold"
+                      : "text-slate-600 hover:text-teal-700"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
+          {/* DESKTOP CTA */}
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={siteConfig.phone ? `tel:${siteConfig.phone}` : "#"}
@@ -55,6 +89,7 @@ export default function Navbar() {
             </a>
           </div>
 
+          {/* MOBILE ACTIONS */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href={siteConfig.phone ? `tel:${siteConfig.phone}` : "#"}
@@ -76,7 +111,7 @@ export default function Navbar() {
 
             <button
               type="button"
-              onClick={toggleMenu}
+              onClick={() => setMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-700"
@@ -87,20 +122,32 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
             <nav className="flex flex-col gap-1">
-              {siteConfig.navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={closeMenu}
-                  className="rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-teal-700"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {siteConfig.navItems.map((item) => {
+                const isActive =
+                  item.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.href);
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className={`rounded-xl px-3 py-3 text-sm font-medium transition ${
+                      isActive
+                        ? "bg-teal-50 text-teal-700 font-semibold"
+                        : "text-slate-700 hover:bg-slate-50 hover:text-teal-700"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="mt-4 grid gap-3">

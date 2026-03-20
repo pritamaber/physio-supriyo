@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingActions from "@/components/ui/FloatingActions";
+
+// ✅ Import font
+import { Dancing_Script } from "next/font/google";
+
+const cursive = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );

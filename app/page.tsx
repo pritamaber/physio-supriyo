@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import ConditionsList from "@/components/home/ConditionsList";
 import ServicesPreview from "@/components/home/ServicesPreview";
+import PreviousTreatments from "@/components/home/PreviousTreatments";
 import AboutPreview from "@/components/home/AboutPreview";
 import TreatmentApproach from "@/components/home/TreatmentApproach";
 import Testimonials from "@/components/home/Testimonials";
@@ -16,6 +17,8 @@ export default function HomePage() {
       <ConditionsList />
       <SectionDivider label="Services" />
       <ServicesPreview />
+      <SectionDivider label="Few Works" />
+      <PreviousTreatments />
       <SectionDivider label="About" />
       <AboutPreview />
       <SectionDivider label="Approach" />
