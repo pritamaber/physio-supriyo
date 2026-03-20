@@ -11,10 +11,14 @@ export default function Hero() {
             Physio Supriyo
           </p>
 
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-xs font-medium text-teal-700">
             <img src="/icons/google.svg" alt="Google" className="h-4 w-4" />
-            <span>Best physiotherapist in Newtown - Kolkata - Rajarhat</span>
-            <span>Trusted by 500+ patient</span>
+
+            <span>Best Physiotherapist in Newtown, Kolkata & Rajarhat</span>
+
+            <span className="opacity-40">•</span>
+
+            <span>Trusted by 500+ patients</span>
           </div>
 
           <h1 className="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl md:text-6xl">
