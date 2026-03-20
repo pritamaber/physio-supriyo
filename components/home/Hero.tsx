@@ -11,13 +11,14 @@ export default function Hero() {
           </p>
 
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            Personalized physiotherapy care for pain relief, mobility, and
-            recovery.
+            Get relief from pain, recover faster, and move freely again.
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            A modern physiotherapy website focused on trust, education, and a
-            smooth consultation journey.
+            Struggling with back pain, neck stiffness, or joint discomfort? Get
+            personalized physiotherapy care focused on quick relief, faster
+            recovery, and long-term results—guided by expert hands you can
+            trust.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
