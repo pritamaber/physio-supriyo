@@ -34,3 +34,56 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+
+@keyframes testimonialScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.testimonial-scroll {
+  animation: testimonialScrollUp 32s linear infinite;
+}
+
+.testimonial-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Vertical (desktop) */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.testimonial-scroll-y {
+  animation: scrollUp 32s linear infinite;
+}
+
+.testimonial-scroll-y:hover {
+  animation-play-state: paused;
+}
+
+/* Horizontal (mobile) */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-scroll-x {
+  animation: scrollLeft 28s linear infinite;
+}
+
+.testimonial-scroll-x:hover {
+  animation-play-state: paused;
+}
