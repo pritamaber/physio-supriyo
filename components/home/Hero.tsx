@@ -15,7 +15,10 @@ export default function Hero() {
 
             {/* TRUST BADGE */}
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700">
-              ⭐ 5-Star Rated Physiotherapist in Kolkata , Newtown , Rajarhat
+              {/* Google Icon */}
+              <img src="/icons/google.svg" alt="Google" className="h-4 w-4" />
+
+              <span>5-star rated on Google & trusted by 500+ patients </span>
             </div>
 
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
@@ -60,7 +63,7 @@ export default function Hero() {
               {/* image */}
               <div className="relative z-10 overflow-hidden rounded-3xl border border-slate-200 shadow-2xl">
                 <Image
-                  src="/images/main-01.jpeg"
+                  src="/images/main/main-01.jpeg"
                   alt="Physiotherapist greeting"
                   width={420}
                   height={520}
