@@ -76,14 +76,14 @@ export default function TrainingPage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="tel:+918282859551"
+                href="tel:+919038296618"
                 className="rounded-full bg-teal-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-teal-800"
               >
                 Call Now
               </a>
 
               <a
-                href="https://wa.me/918282859551"
+                href="https://wa.me/919038296618"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"
@@ -279,14 +279,14 @@ export default function TrainingPage() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="tel:+918282859551"
+              href="tel:+919038296618"
               className="rounded-full bg-teal-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-teal-800"
             >
               Call Now
             </a>
 
             <a
-              href="https://wa.me/918282859551"
+              href="https://wa.me/919038296618"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"

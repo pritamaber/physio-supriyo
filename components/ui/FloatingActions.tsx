@@ -12,13 +12,13 @@ import {
 
 const actions = [
   {
-    href: "https://wa.me/918282859551",
+    href: "https://wa.me/919038296618",
     label: "WhatsApp",
     icon: MessageCircle,
     className: "bg-green-500 hover:bg-green-600 text-white",
   },
   {
-    href: "tel:+918282859551",
+    href: "tel:+919038296618",
     label: "Call",
     icon: Phone,
     className: "bg-teal-700 hover:bg-teal-800 text-white",

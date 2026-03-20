@@ -3,8 +3,8 @@ export const siteConfig = {
   description:
     "Personalized physiotherapy care for pain relief, posture improvement, mobility, and recovery.",
   url: "https://www.physiosupriyo.com",
-  phone: "+919999999999",
-  whatsapp: "https://wa.me/919999999999",
+  phone: "+919038296618",
+  whatsapp: "https://wa.me/919038296618",
   email: "contact@physiosupriyo.com",
   address: "Newtown & Rajarhat, Kolkata",
   navItems: [

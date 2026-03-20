@@ -21,18 +21,18 @@ export default function ContactPage() {
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {/* CALL */}
         <a
-          href="tel:+918282859551"
+          href="tel:+91919038296618"
           className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
         >
           <p className="text-sm text-slate-500">Call</p>
           <p className="mt-1 text-lg font-semibold text-slate-900">
-            +91 82828 59551
+            +91 90382 96618
           </p>
         </a>
 
         {/* WHATSAPP */}
         <a
-          href="https://wa.me/918282859551"
+          href="https://wa.me/919038296618"
           target="_blank"
           className="rounded-2xl border border-teal-200 bg-teal-50 p-5 shadow-sm transition hover:shadow-md"
         >

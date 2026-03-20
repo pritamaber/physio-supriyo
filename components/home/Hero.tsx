@@ -33,9 +33,14 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="rounded-full bg-teal-700 px-6 py-3 text-white hover:bg-teal-800">
+              <a
+                href="https://wa.me/919038296618?text=Hi%2C%20I%20want%20to%20book%20a%20consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-teal-700 px-6 py-3 text-white hover:bg-teal-800 inline-block"
+              >
                 Book Consultation
-              </button>
+              </a>
 
               <button className="rounded-full border border-slate-300 px-6 py-3 text-slate-700 hover:border-teal-700 hover:text-teal-700">
                 View Services
