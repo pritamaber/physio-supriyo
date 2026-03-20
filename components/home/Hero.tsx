@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+    <section className="mx-auto max-w-7xl px-6 py-10 md:py-14">
       <div className="grid items-center gap-10 md:grid-cols-2">
         {/* LEFT CONTENT */}
         <div className="max-w-xl">
@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="rounded-full bg-teal-700 px-6 pjy-3 text-white hover:bg-teal-800">
+            <button className="rounded-full bg-teal-700 px-6 py-3 text-white hover:bg-teal-800">
               Book Consultation
             </button>
 

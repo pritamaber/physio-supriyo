@@ -41,7 +41,7 @@ const conditions = [
 
 export default function ConditionsList() {
   return (
-    <section className="bg-slate-50 py-16 md:py-24">
+    <section className="bg-slate-50 py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <div className="max-w-2xl">
