@@ -154,7 +154,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://wa.me/919038296618"
+              href="https://wa.me/918282859551"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700 transition hover:bg-teal-100"
