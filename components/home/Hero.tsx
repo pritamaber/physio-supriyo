@@ -10,6 +10,11 @@ export default function Hero() {
             Physio Supriyo
           </p>
 
+          {/* TRUST BADGE */}
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-700">
+            ⭐ 5-Star Rated Physiotherapist in Newtown & Rajarhat
+          </div>
+
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
             Get relief from pain, recover faster, and move freely again.
           </h1>
@@ -17,8 +22,8 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Struggling with back pain, neck stiffness, or joint discomfort? Get
             personalized physiotherapy care focused on quick relief, faster
-            recovery, and long-term results—guided by expert hands you can
-            trust.
+            recovery, and long-term results—guided by expert hands trusted by
+            patients across Newtown and Rajarhat.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -30,6 +35,12 @@ export default function Hero() {
               View Services
             </button>
           </div>
+
+          {/* EXTRA TRUST LINE */}
+          <p className="mt-6 text-sm text-slate-500">
+            Trusted by patients for effective treatment, friendly care, and real
+            recovery results.
+          </p>
         </div>
 
         {/* RIGHT IMAGE */}
