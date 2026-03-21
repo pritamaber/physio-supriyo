@@ -1,22 +1,37 @@
 import Link from "next/link";
-import { BadgeCheck, HeartHandshake, ShieldCheck } from "lucide-react";
+import {
+  BadgeCheck,
+  HeartHandshake,
+  ShieldCheck,
+  GraduationCap,
+  Stethoscope,
+  Award,
+} from "lucide-react";
 
 const highlights = [
   {
     title: "Personalized Care",
-    desc: "Treatment plans are tailored to each patient’s pain points, movement goals, and recovery needs.",
+    desc: "Treatment plans are tailored to each patient’s pain points, movement goals, lifestyle needs, and recovery priorities.",
     icon: HeartHandshake,
   },
   {
     title: "Trusted Approach",
-    desc: "A patient-first approach focused on comfort, clarity, and long-term improvement.",
+    desc: "A patient-first approach focused on comfort, clear communication, safe treatment methods, and long-term improvement.",
     icon: ShieldCheck,
   },
   {
     title: "Professional Guidance",
-    desc: "Clear assessment, practical advice, and hands-on support for confident recovery.",
+    desc: "Clear assessment, practical advice, and hands-on physiotherapy support designed to improve confidence and recovery outcomes.",
     icon: BadgeCheck,
   },
+];
+
+const credentials = [
+  "Physiotherapist & Trainer",
+  "Sports Physiotherapy Support",
+  "Fellow: Spinal Manipulation Program, MTFI Mangalore",
+  "Kinesiology Taping, Myofascial Release & Dry Needling",
+  "Regd. Rehab Professional, Rehabilitation Council of India",
 ];
 
 export default function AboutPreview() {
@@ -29,7 +44,7 @@ export default function AboutPreview() {
               About Physio Supriyo
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
               Caring physiotherapy support focused on recovery, movement, and
               long-term relief
             </h2>
@@ -45,6 +60,30 @@ export default function AboutPreview() {
               treatment plan is designed to support better mobility, improved
               function, and lasting recovery.
             </p>
+
+            <p className="mt-4 text-slate-600">
+              The practice also reflects continued professional development,
+              hands-on physiotherapy methods, workshop involvement, and a
+              commitment to helping people move better through practical, guided
+              care.
+            </p>
+
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+                Professional Background
+              </p>
+
+              <ul className="mt-4 space-y-3">
+                {credentials.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-700" />
+                    <span className="text-sm leading-6 text-slate-600">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="mt-8">
               <Link

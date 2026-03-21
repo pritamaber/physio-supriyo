@@ -1,3 +1,5 @@
+import { label } from "framer-motion/client";
+
 export const siteConfig = {
   name: "Physio Supriyo",
   description:
@@ -11,7 +13,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    // { label: "Conditions", href: "/conditions" },
+    {label:"Events", href:"/events"},
     { label: "Training", href: "/training" },
     { label: "Contact", href: "/contact" },
   ],

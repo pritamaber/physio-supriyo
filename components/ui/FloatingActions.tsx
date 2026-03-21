@@ -8,6 +8,7 @@ import {
   MessageCircle,
   Facebook,
   Instagram,
+  Youtube,
 } from "lucide-react";
 
 const actions = [
@@ -28,6 +29,12 @@ const actions = [
     label: "Facebook",
     icon: Facebook,
     className: "bg-blue-600 hover:bg-blue-700 text-white",
+  },
+  {
+    href: "https://www.youtube.com/@physiosupriyo9539",
+    label: "YouTube",
+    icon: Youtube,
+    className: "bg-red-600 hover:bg-red-700 text-white",
   },
   {
     href: "#",

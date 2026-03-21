@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import ConditionsList from "@/components/home/ConditionsList";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import PreviousTreatments from "@/components/home/PreviousTreatments";
+import EventsPreview from "@/components/home/EventsPreview";
 import AboutPreview from "@/components/home/AboutPreview";
 // import TreatmentApproach from "@/components/home/TreatmentApproach";
 import Testimonials from "@/components/home/Testimonials";
@@ -49,6 +50,11 @@ export default function HomePage() {
       <ScrollReveal>
         <SectionDivider label="About" />
         <AboutPreview />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <SectionDivider label="Events" />
+        <EventsPreview />
       </ScrollReveal>
 
       <ScrollReveal>

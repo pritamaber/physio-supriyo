@@ -1,12 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   GraduationCap,
   Hand,
   Brain,
   Users,
   CheckCircle2,
+  ArrowRight,
   Presentation,
+  BadgeCheck,
 } from "lucide-react";
 
 const trainingAreas = [
@@ -32,52 +33,79 @@ const trainingAreas = [
   },
 ];
 
-const highlights = [
+const benefits = [
   "Patient-focused clinical reasoning",
   "Practical physiotherapy learning",
   "Movement assessment and recovery planning",
   "Mentorship for future physiotherapists",
+  "Confidence-building academic support",
+  "Real-world clinical perspective",
 ];
 
-const trainingGallery = [
-  "/images/training/training-02.jpeg",
-  "/images/training/training-02.jpeg",
-  "/images/training/training-02.jpeg",
-  "/images/training/training-02.jpeg",
+const credentials = [
+  "Fellow: Spinal Manipulation Program, MTFI Mangalore",
+  "Physiotherapist, Fitness Trainer & Sports Physio",
+  "Kinesiology Taping, Myofascial Release & Dry Needling",
+  "Regd. Rehab Professional, Rehabilitation Council of India",
 ];
 
 export default function TrainingPage() {
   return (
-    <main className="bg-slate-50">
-      <section className="mx-auto max-w-7xl px-6 py-12 md:py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+    <section className="bg-slate-50 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
               Training & Mentorship
             </p>
 
-            <h1 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
-              Physiotherapy training, mentorship, and practical guidance for
-              students
+            <h1 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
+              Physiotherapy training for students focused on practical learning,
+              mentorship, and clinical understanding
             </h1>
 
-            <p className="mt-5 max-w-2xl leading-7 text-slate-600">
-              Alongside patient care, Physio Supriyo is actively involved in
-              teaching and mentoring physiotherapy students, with a focus on
-              practical learning, stronger clinical understanding, and confident
-              patient-centered practice.
+            <p className="mt-5 text-slate-600">
+              Alongside patient care, Physio Supriyo supports physiotherapy
+              students through practical learning, stronger clinical
+              understanding, and mentorship that connects academic knowledge
+              with real-world application.
             </p>
 
-            <p className="mt-4 max-w-2xl leading-7 text-slate-600">
-              The goal is to help learners move beyond theory and develop the
-              skills needed to assess movement, understand dysfunction, think
-              clinically, and guide recovery with clarity and care.
+            <p className="mt-4 text-slate-600">
+              Through association with Global Technical Institute, the training
+              approach emphasizes hands-on guidance, clinical observation,
+              patient-centered thinking, and practical experience that helps
+              students grow beyond textbook learning.
             </p>
+
+            <p className="mt-4 text-slate-600">
+              The goal is to help learners build confidence in assessment,
+              movement analysis, treatment planning, and rehabilitation support
+              through clear instruction, real clinical perspective, and guided
+              practical exposure.
+            </p>
+
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+                Professional Background
+              </p>
+
+              <ul className="mt-4 space-y-3">
+                {credentials.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-700" />
+                    <span className="text-sm leading-6 text-slate-600">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="tel:+919038296618"
-                className="rounded-full bg-teal-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-teal-800"
+                className="inline-flex rounded-full bg-teal-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-teal-800"
               >
                 Call Now
               </a>
@@ -86,62 +114,142 @@ export default function TrainingPage() {
                 href="https://wa.me/919038296618"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"
+                className="inline-flex rounded-full border border-teal-200 bg-teal-50 px-6 py-3 text-sm font-medium text-teal-700 transition hover:bg-teal-100"
               >
                 WhatsApp
               </a>
 
               <Link
                 href="/contact"
-                className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"
+                className="inline-flex rounded-full border border-teal-200 bg-teal-50 px-6 py-3 text-sm font-medium text-teal-700 transition hover:bg-teal-100"
               >
                 Contact Page
               </Link>
             </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
+              {trainingAreas.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                  >
+                    <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-teal-50 text-teal-700">
+                      <Icon size={22} />
+                    </div>
+
+                    <h2 className="text-base font-semibold text-slate-900">
+                      {item.title}
+                    </h2>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[480px] lg:mx-0">
-            <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-              <div className="grid grid-cols-2 gap-4">
-                {trainingGallery.map((src, index) => (
+          <div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
+                    Why Choose This Training
+                  </p>
+                  <h3 className="mt-2 text-2xl font-bold text-slate-900">
+                    Practical mentorship with a clinically guided learning
+                    approach
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    The training approach focuses on clinical reasoning,
+                    practical observation, guided learning, and supportive
+                    mentorship that helps students grow with greater clarity and
+                    confidence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {benefits.map((item) => (
                   <div
-                    key={`${src}-${index}`}
-                    className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-100"
+                    key={item}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
                   >
-                    <div className="relative aspect-[4/5] w-full">
-                      <Image
-                        src={src}
-                        alt={`Training session ${index + 1}`}
-                        fill
-                        className="object-cover object-center transition duration-300 group-hover:scale-105"
-                      />
+                    <div className="flex items-start gap-3">
+                      <div className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                        <CheckCircle2 size={16} />
+                      </div>
+
+                      <div>
+                        <p className="text-sm font-medium leading-6 text-slate-800">
+                          {item}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-5 rounded-2xl bg-teal-50 p-5">
+              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <div className="flex items-start gap-3">
+                  <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-teal-700">
+                    <BadgeCheck size={20} />
+                  </div>
+
+                  <div>
+                    <h4 className="text-base font-semibold text-slate-900">
+                      New batch starting March 2026
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-slate-700">
+                      A new training batch is scheduled to begin in March 2026
+                      at Global Technical Institute, with a focus on practical
+                      exposure, real patient-based understanding, and guided
+                      physiotherapy learning.
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-700">
+                      Location: Rajarhat, West Bengal 700135
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-2xl bg-teal-50 p-5">
                 <div className="flex items-start gap-3">
                   <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-teal-700">
                     <Presentation size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-lg font-semibold text-slate-900">
-                      Regular workshops and awareness sessions
-                    </h2>
+                    <h4 className="text-base font-semibold text-slate-900">
+                      Workshops and student guidance sessions
+                    </h4>
                     <p className="mt-2 text-sm leading-6 text-slate-700">
-                      Workshops are conducted at regular intervals to support
-                      physiotherapy education, practical skill development,
-                      posture awareness, rehabilitation understanding, and
-                      better movement-focused learning.
+                      Regular workshops and mentorship sessions are designed to
+                      improve clinical understanding, practical physiotherapy
+                      learning, rehabilitation awareness, and movement-focused
+                      thinking for students.
                     </p>
-                    <div className="mt-4">
+
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <a
+                        href="https://wa.me/919038296618"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-full bg-teal-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-800"
+                      >
+                        Join via WhatsApp
+                      </a>
+
                       <Link
                         href="/contact"
-                        className="inline-flex rounded-full bg-teal-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-800"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-teal-700 transition hover:text-teal-800"
                       >
-                        Subscribe to Know More
+                        Contact Page
+                        <ArrowRight size={16} />
                       </Link>
                     </div>
                   </div>
@@ -150,159 +258,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-4">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
-              Learning beyond theory
-            </p>
-            <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
-              Practical physiotherapy education shaped by clinical perspective
-            </h2>
-            <p className="mt-4 leading-7 text-slate-600">
-              Good physiotherapy education goes beyond textbooks. It requires
-              learning how to assess movement, identify patterns, think
-              clinically, and guide recovery in ways that are safe, effective,
-              and relevant to real patients.
-            </p>
-            <p className="mt-4 leading-7 text-slate-600">
-              Through training and mentorship, students are encouraged to build
-              both technical understanding and the confidence needed to apply
-              that knowledge in practical and clinical settings.
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {trainingAreas.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
-                >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-teal-100 text-teal-700">
-                    <Icon size={22} />
-                  </div>
-
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {item.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-10 md:py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
-              Core focus areas
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold text-slate-900">
-              What students gain through mentorship
-            </h2>
-
-            <ul className="mt-6 space-y-4">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="mt-0.5 shrink-0 text-teal-700"
-                  />
-                  <span className="text-sm leading-6 text-slate-600">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
-              A clinician’s perspective in teaching
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold text-slate-900">
-              Mentorship grounded in real patient care
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              Mentorship becomes more valuable when it is shaped by real
-              clinical experience. By combining patient care with student
-              guidance, the learning process becomes more practical, relevant,
-              and connected to real rehabilitation outcomes.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              This dual role as practitioner and mentor helps students develop
-              confidence, improve decision-making, and build a stronger
-              understanding of physiotherapy as both a profession and a lifelong
-              discipline of learning.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              Training support may also include academic participation, workshop
-              involvement, practical discussion, and continued encouragement for
-              learners preparing for clinical environments.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-12 md:pb-16">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
-              Get in touch
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
-              Looking for guidance in physiotherapy learning?
-            </h2>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              Whether you are a student seeking mentorship, practical exposure,
-              or clinically grounded learning support, this training-focused
-              approach can help strengthen both knowledge and confidence.
-            </p>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href="tel:+919038296618"
-              className="rounded-full bg-teal-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-teal-800"
-            >
-              Call Now
-            </a>
-
-            <a
-              href="https://wa.me/919038296618"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"
-            >
-              WhatsApp
-            </a>
-
-            <Link
-              href="/contact"
-              className="rounded-full border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 transition hover:border-teal-700 hover:text-teal-700"
-            >
-              Contact Page
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

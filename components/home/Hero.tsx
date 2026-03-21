@@ -84,6 +84,14 @@ export default function Hero() {
                 priority
               />
             </div>
+
+            {/* Caption */}
+            <div className="mt-3 text-center md:text-right">
+              <p className="text-xs font-medium text-slate-600">
+                Fellow: Spinal Manipulation Program
+              </p>
+              <p className="text-xs text-slate-500">MTFI, Mangalore</p>
+            </div>
           </div>
         </div>
       </div>
